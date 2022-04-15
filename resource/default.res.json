@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,egg_1_png,egg_2_png,egg_3_png,egg_4_png,egg_5_png,egg_6_png,egg_7_png,egg_8_png,egg_9_png,egg_10_png,point_png,backgourd_jpg,BG_png,character_0_png,character_1_png,character_2_png,character_3_png,character_4_png,character_5_png,character_6_png,egg_0_png",
 			"name": "preload"
 		}
 	],
@@ -135,6 +135,111 @@
 			"name": "description_json",
 			"type": "json",
 			"url": "config/description.json"
+		},
+		{
+			"name": "egg_1_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_1.png"
+		},
+		{
+			"name": "egg_2_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_2.png"
+		},
+		{
+			"name": "egg_3_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_3.png"
+		},
+		{
+			"name": "egg_4_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_4.png"
+		},
+		{
+			"name": "egg_5_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_5.png"
+		},
+		{
+			"name": "egg_6_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_6.png"
+		},
+		{
+			"name": "egg_7_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_7.png"
+		},
+		{
+			"name": "egg_8_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_8.png"
+		},
+		{
+			"name": "egg_9_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_9.png"
+		},
+		{
+			"name": "egg_10_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_10.png"
+		},
+		{
+			"name": "point_png",
+			"type": "image",
+			"url": "assets/SpinToWin/point.png"
+		},
+		{
+			"name": "backgourd_jpg",
+			"type": "image",
+			"url": "assets/SpinToWin/backgourd.jpg"
+		},
+		{
+			"name": "BG_png",
+			"type": "image",
+			"url": "assets/SpinToWin/BG.png"
+		},
+		{
+			"name": "character_0_png",
+			"type": "image",
+			"url": "assets/SpinToWin/character_0.png"
+		},
+		{
+			"name": "character_1_png",
+			"type": "image",
+			"url": "assets/SpinToWin/character_1.png"
+		},
+		{
+			"name": "character_2_png",
+			"type": "image",
+			"url": "assets/SpinToWin/character_2.png"
+		},
+		{
+			"name": "character_3_png",
+			"type": "image",
+			"url": "assets/SpinToWin/character_3.png"
+		},
+		{
+			"name": "character_4_png",
+			"type": "image",
+			"url": "assets/SpinToWin/character_4.png"
+		},
+		{
+			"name": "character_5_png",
+			"type": "image",
+			"url": "assets/SpinToWin/character_5.png"
+		},
+		{
+			"name": "character_6_png",
+			"type": "image",
+			"url": "assets/SpinToWin/character_6.png"
+		},
+		{
+			"name": "egg_0_png",
+			"type": "image",
+			"url": "assets/SpinToWin/egg_0.png"
 		}
 	]
 }

@@ -13,13 +13,22 @@
       "name": "egret"
     },
     {
-      "name": "eui"
-    },
-    {
       "name": "res"
     },
     {
+      "name": "eui"
+    },
+    {
       "name": "tween"
+    },
+    {
+      "name": "greensock",
+      "path": "org/greensock"
     }
-  ]
+  ],
+  "eui": {
+    "exmlRoot": [
+      "resource/eui_skins"
+    ]
+  }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SpineToWinSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="1802797a564" ></w:Config>
+	<e:Image left="0" right="0" top="0" bottom="0" source="backgourd_jpg"/>
+	<e:Image id="turn_ig" width="470" height="470" x="125" y="127.27" source="BG_png" anchorOffsetX="0"/>
+	<e:Image source="egg_1_png" y="192" scaleX="0.3" scaleY="0.3" horizontalCenter="1.5"/>
+	<e:Image id="point_ig" width="48" height="75" x="336.36" y="112.12" source="point_png"/>
+	<e:Image width="256" height="256" y="275" source="egg_2_png" scaleX="0.3" scaleY="0.3" x="183"/>
+	<e:Group width="200" height="200" x="98" y="176"/>
+	<e:Button id="start_bt" label="Button" x="173" y="118"/>
+	<e:Label id="run_tx" text="Label" x="142" y="557" size="93"/>
+</e:Skin>

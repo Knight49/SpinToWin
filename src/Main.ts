@@ -129,7 +129,10 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected startCreateScene(): void {
-        let sky:egret.Bitmap = this.createBitmapByName("bg_jpg");
+        
+        this.addChild(new SpineToWin());
+        return;
+        let sky: egret.Bitmap = this.createBitmapByName("bg_jpg");
         this.addChild(sky);
         let stageW:number = this.stage.stageWidth;
         let stageH:number = this.stage.stageHeight;

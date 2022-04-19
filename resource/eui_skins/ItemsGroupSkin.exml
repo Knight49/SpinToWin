@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ItemsGroupSkin" width="400" height="400" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="180425fa497" ></w:Config>
+	<e:DataGroup width="400" height="400" anchorOffsetX="0" bottom="0" itemRendererSkinName="ItemRDSkin" horizontalCenter="0">
+		<e:layout>
+			<e:TileLayout horizontalGap="6" orientation="rows"/>
+		</e:layout>
+	</e:DataGroup>
+</e:Skin>

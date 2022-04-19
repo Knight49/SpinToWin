@@ -1,12 +1,15 @@
-class DataController {
-	static instance: DataController;
-	private static _instance: DataController;
+class GDataController {
+	static instance: GDataController;
+	private static _instance: GDataController;
 
-	public static getInstance(): DataController {
-		if (!DataController.instance) {
-			DataController.instance = new DataController();
+	/**
+	* 單例模式
+	*/
+	public static getInstance(): GDataController {
+		if (!GDataController.instance) {
+			GDataController.instance = new GDataController();
 		}
-		return DataController.instance;
+		return GDataController.instance;
 	}
 
 	constructor() { }
@@ -34,13 +37,6 @@ class DataController {
 		egret.localStorage.removeItem(key);
 	}
 
-	// 範例
-	// private test():void{
-	// 	let test:TPlayerData = new TPlayerData();
-		
-	// 	JSON.stringify(test);
-	// }
-
 	/**
 	* 存檔:依結構存檔
 	*/
@@ -62,6 +58,9 @@ class DataController {
 		return this.checkSaveed(valueString)? JSON.parse(valueString, kind):defaultValue;
 	}
 
+	/**
+	* 檢查資料是否安全
+	*/
 	private checkSaveed(becheckItem : any) : boolean
 	{
 		if(becheckItem == "" || becheckItem == undefined || becheckItem == null)

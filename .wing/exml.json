@@ -6,5 +6,15 @@
   },
   "global": {
     "globalAutoLayerMarkEnable": true
+  },
+  "180422eb97f": {
+    "path": "..\\resource\\eui_skins\\ItemRD.ts",
+    "class": "ItemRD",
+    "parentPath": ""
+  },
+  "180425fa497": {
+    "path": "..\\resource\\eui_skins\\ItemsGroup.ts",
+    "class": "ItemsGroup",
+    "parentPath": ""
   }
 }

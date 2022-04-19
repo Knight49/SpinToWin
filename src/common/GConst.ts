@@ -16,5 +16,10 @@ class GConst {
      * DataKey : 用於資料操作使用, 玩家現有金額
      */
     public static DATAKEY_PLAYER_OWNCOIN = "own_coin";
+
+     /**
+     * 轉盤盤面數量:Y軸
+     */
+    public static PAY_COIN : number = 100; 
     
 }

@@ -38,7 +38,6 @@ class GFunction {
                 item.$setAnchorOffsetX(1);
                 item.$setAnchorOffsetY(item.height * 0.5);
                 break;
-
         }
     }
 }

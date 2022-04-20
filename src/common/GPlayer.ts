@@ -4,7 +4,7 @@ class GPlayer {
 	private static _instance: GPlayer;
 	/** 玩家金額資料 */
 	public static data: TPlayerData;
-	
+
 	/** 單例模式 */
 	public static getInstance(): GPlayer {
 		if (!GPlayer.instance) {
@@ -58,6 +58,17 @@ class GPlayer {
 			GPlayer.data.nowUseConin = 0;
 		}
 	}
+
+	/**
+	* 金手指加金幣
+	*/
+	public static GoldFingerAdd(index: number) {
+		if (index) {
+			GPlayer.data.ownCoin += index;
+		}
+	}
+
+	
 
 	/**
 	* 加入得獎金額

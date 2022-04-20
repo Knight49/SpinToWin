@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GoldFingerPanelSkin" minHeight="230" minWidth="450" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="273.499">
+	<e:Image left="0" right="0" bottom="0" top="0" scale9Grid="2,2,12,12" height="76" source="goldFinger_bg_jpg" width="450"/>
+    <e:Group id="moveArea" left="0" right="0" top="0" height="45">
+        <e:Image left="0" right="0" bottom="0"  top="0" source="header_png"/>
+        <e:Label id="titleDisplay" size="20" fontFamily="Tahoma" textColor="0xFFFFFF"
+                 wordWrap="false" left="15" right="5" verticalCenter="0" visible="true"/>
+    </e:Group>
+    <e:Button id="closeButton" label="close" bottom="14.499000000000024" horizontalCenter="0.5"/>
+	<e:Group height="60.322" left="20" right="20" top="60">
+		<e:Label text="加金幣:" x="114" y="25" height="40" size="26" fontFamily="Microsoft YaHei" stroke="3" verticalAlign="middle"/>
+		<e:TextInput id="add_input" width="196" height="48" x="212" y="42" text="0"/>
+		<e:Button id="add_bt" label="加金幣" x="240" y="25"/>
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="left" verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+	<e:Group height="60.322" left="20" right="20" top="130" x="30">
+		<e:Label text="設結果:" x="114" y="25" height="40" size="26" fontFamily="Microsoft YaHei" border="false" stroke="3" verticalAlign="middle"/>
+		<e:TextInput id="set_input" width="196" height="48" x="212" y="42" text="0"/>
+		<e:Button id="set_bt" label="設定" x="240" y="25"/>
+		<e:layout>
+		<e:HorizontalLayout horizontalAlign="left" verticalAlign="middle"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

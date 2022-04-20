@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,egg_1_png,egg_2_png,egg_3_png,egg_4_png,egg_5_png,egg_6_png,egg_7_png,egg_8_png,egg_9_png,egg_10_png,point_png,backgourd_jpg,BG_png,character_0_png,character_1_png,character_2_png,character_3_png,character_4_png,character_5_png,character_6_png,egg_0_png,egg_11_png,egg_12_png,egg_13_png,egg_14_png",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,egg_1_png,egg_2_png,egg_3_png,egg_4_png,egg_5_png,egg_6_png,egg_7_png,egg_8_png,egg_9_png,egg_10_png,point_png,backgourd_jpg,BG_png,character_0_png,character_1_png,character_2_png,character_3_png,character_4_png,character_5_png,character_6_png,egg_0_png,egg_11_png,egg_12_png,egg_13_png,egg_14_png,goldFinger_bg_jpg",
 			"name": "preload"
 		}
 	],
@@ -260,6 +260,11 @@
 			"name": "egg_14_png",
 			"type": "image",
 			"url": "assets/SpinToWin/egg_14.png"
+		},
+		{
+			"name": "goldFinger_bg_jpg",
+			"type": "image",
+			"url": "assets/SpinToWin/goldFinger_bg.jpg"
 		}
 	]
 }

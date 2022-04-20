@@ -1,20 +1,25 @@
 {
-  "1802797a564": {
-    "path": "..\\resource\\eui_skins\\SpineToWin.ts",
-    "class": "SpineToWin",
-    "parentPath": ""
-  },
-  "global": {
-    "globalAutoLayerMarkEnable": true
-  },
-  "180422eb97f": {
-    "path": "..\\resource\\eui_skins\\ItemRD.ts",
-    "class": "ItemRD",
-    "parentPath": ""
-  },
-  "180425fa497": {
-    "path": "..\\resource\\eui_skins\\ItemsGroup.ts",
-    "class": "ItemsGroup",
-    "parentPath": ""
-  }
+    "1802797a564": {
+        "path": "..\\resource\\eui_skins\\SpineToWin.ts",
+        "class": "SpineToWin",
+        "parentPath": ""
+    },
+    "global": {
+        "globalAutoLayerMarkEnable": true
+    },
+    "180422eb97f": {
+        "path": "..\\resource\\eui_skins\\ItemRD.ts",
+        "class": "ItemRD",
+        "parentPath": ""
+    },
+    "180425fa497": {
+        "path": "..\\resource\\eui_skins\\ItemsGroup.ts",
+        "class": "ItemsGroup",
+        "parentPath": ""
+    },
+    "1804661ffca": {
+        "path": "..\\resource\\eui_skins\\GoldFingerPanel.ts",
+        "class": "GoldFingerPanel",
+        "parentPath": ""
+    }
 }

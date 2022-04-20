@@ -9,6 +9,8 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 	private start_bt: eui.Button;
 	/** 存檔:按鈕 */
 	private exit_bt: eui.Button;
+	/** 金手指:按鈕 */
+	private goldFinger_bt: eui.Button;
 	/** 轉動時提示: 文字*/	
 	private run_tx: eui.Label;
 	/** 擁有金幣: 文字*/	
@@ -56,6 +58,7 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		GFunction.setCenter(this.turn_gp, EAlignment.center);
 		this.start_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onStart, this);
 		this.exit_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSave, this);
+		this.goldFinger_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onGoldFinger, this);
 		this.updateView();
 	}
 
@@ -91,6 +94,34 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
      */
 	private onSave(): void {
 		GPlayer.save();
+	}
+	
+	/**
+     * 金手指指定結果
+     */
+	public goldFingerSet(index: number):void{
+		this.reset();
+		let rightIndex = index % 6;
+		this.setTipText(this.beStrartTip, String(rightIndex));
+		let toAngle: number = this.turnData.getAngle(index);
+		TweenMax.to(this.turn_gp, 5, { rotation: toAngle, onComplete: this.finishComplet.bind(this) });
+	}
+
+	/**
+     * 金手指
+     */
+	private onGoldFinger(): void {
+
+		let panel:GoldFingerPanel = new GoldFingerPanel(this);
+		
+		// let panel = new eui.Panel();
+        // panel.title = "金手指";
+        // panel.horizontalCenter = 0;
+        // panel.verticalCenter = 0;
+		// panel.width = 500;
+		// panel.height = 500;
+		// panel.y = 100;
+        this.addChild(panel);
 	}
 	
 	/**

@@ -15,12 +15,14 @@
     "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
     "SpineToWin": "resource/eui_skins/SpineToWin.exml",
     "ItemRDSkin": "resource/eui_skins/ItemRDSkin.exml",
-    "ItemsGroup": "resource/eui_skins/ItemsGroup.exml"
+    "ItemsGroup": "resource/eui_skins/ItemsGroup.exml",
+    "GoldFingerPanel": "resource/eui_skins/GoldFingerPanel.exml"
   },
   "autoGenerateExmlsList": true,
   "exmls": [
     "resource/eui_skins/ButtonSkin.exml",
     "resource/eui_skins/CheckBoxSkin.exml",
+    "resource/eui_skins/GoldFingerPanelSkin.exml",
     "resource/eui_skins/HScrollBarSkin.exml",
     "resource/eui_skins/HSliderSkin.exml",
     "resource/eui_skins/ItemRDSkin.exml",

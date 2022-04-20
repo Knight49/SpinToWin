@@ -19,7 +19,7 @@ class GPlayer {
 	*/
 	private initData(): void {
 		GPlayer.data = new TPlayerData();
-		GDataController.getInstance().readToStruct(GConst.DATAKEY_PLAYER_OWNCOIN, TPlayerData, GPlayer.data);
+		GPlayer.data = GDataController.getInstance().readToStruct(GConst.DATAKEY_PLAYER_OWNCOIN) as TPlayerData;
 	}
 
 	constructor() { }
@@ -65,5 +65,16 @@ class GPlayer {
 	*/
 	public static addIsEnough(): boolean{
 		return GPlayer.data.ownCoin > GPlayer.data.nowUseConin + GConst.PAY_COIN;	
+	}
+
+	/**
+	* 存檔
+	*/
+	public static save()
+	{
+		// TODO:在真正遊戲中是server 資料，所以就不管還有沒有轉玩在存檔
+		GPlayer.data.nowUseConin = 0;
+		GPlayer.data.getConin = 0;
+		GDataController.getInstance().saveByStruct(GConst.DATAKEY_PLAYER_OWNCOIN, GPlayer.data);
 	}
 }

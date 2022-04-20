@@ -51,11 +51,19 @@ class GDataController {
 	/**
 	* 讀檔:讀取後轉成指定的結構
 	*/
-	public readToStruct(key:string, kind : any, defaultValue:any) : any
+	public readToStruct(key:string) : any
 	{
 		let valueString : string = egret.localStorage.getItem(key);
-
-		return this.checkSaveed(valueString)? JSON.parse(valueString, kind):defaultValue;
+		// let result = new kind().from;
+		
+		if(this.checkSaveed(valueString))
+		{
+			// let user = JSON.parse(valueString, kind);
+		 	 return JSON.parse(valueString);
+			// return result;
+		}else{
+			return null;
+		}
 	}
 
 	/**

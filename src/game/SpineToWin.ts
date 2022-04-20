@@ -5,7 +5,12 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 	private turn_ig: eui.Image;
 	private turn_gp: eui.Group;
 	private start_bt: eui.Button;
+	private exit_bt: eui.Button;
 	private run_tx: eui.Label;
+	private own_coin_tx: eui.Label;
+	private bet_coin_tx: eui.Label;
+	private reward_coin_tx: eui.Label;
+	
 	private turnData: TTurnData;
 	// private playerData: TPlayerData;
 	private turnState: ETurnState = ETurnState.readyToStart;
@@ -35,7 +40,9 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 
 	private initUICom(): void {
 		GFunction.setCenter(this.turn_gp, EAlignment.center);
-		this.start_bt.$addListener(egret.TouchEvent.TOUCH_TAP, this.onStart, this);
+		this.start_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onStart, this);
+		this.exit_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onExit, this);
+		this.updateView();
 	}
 
 	private selectItem(e: eui.ItemTapEvent): void {
@@ -56,6 +63,8 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 	}
 
 	private onStart(): void {
+		GPlayer.data.getConin = 0;
+		
 		if (GPlayer.canPlay()) {
 			let rad: number = GFunction.getRandomInt(15);
 			this.turnData.resulte = rad;
@@ -64,7 +73,13 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 			let toAngle: number = this.turnData.getAngle(rad);
 			TweenMax.to(this.turn_gp, 5, { rotation: toAngle, onComplete: this.finishComplet.bind(this) });
 			GPlayer.playOnce();
+
+			this.updateView();
 		}
+	}
+
+	private onExit(): void {
+		GPlayer.save();
 	}
 
 	private calculateConin() {
@@ -80,6 +95,7 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		this.setTipText(this.willGetTipStr, String(this.turnData.resulte % 6));
 		let index = this.turnData.resulte % 6;
 		let count = this.createGP.getIndexCount(index);
+		GPlayer.data.getConin = count * GConst.PAY_COIN;
 		if (count > 0) {
 			alert("恭喜中獎金 : " + count * GConst.PAY_COIN);
 		} else {
@@ -94,5 +110,10 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		this.run_tx.text = formatStr.format(value);
 	}
 
+	public updateView():void{
+		this.own_coin_tx.text = GPlayer.data.ownCoin.toString();
+		this.bet_coin_tx.text = GPlayer.data.nowUseConin.toString();
+		this.reward_coin_tx.text = GPlayer.data.getConin.toString();
+	}
 }
 

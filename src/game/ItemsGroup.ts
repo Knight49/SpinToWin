@@ -1,17 +1,19 @@
-// class ItemsGroup extends eui.Component {
+ /** 自訂義Group */
 class ItemsGroup extends eui.DataGroup {
+    /** 數組 : 跟dataArray配套使用*/
     public dataList: eui.List;
+    /** 數據封裝 : 當數據改變時，會派發通知*/
     private dataArray: eui.ArrayCollection = new eui.ArrayCollection();
+    /** 方便建立*/
     public static instance: ItemsGroup;
-    public lst: eui.List;
-    private callback: Function;
+    
+    // public lst: eui.List;
+     /** 按鈕數量*/
     private btnCount: number = 6;
 
     public constructor() {
         super();
         ItemsGroup.instance = this;
-
-        // this.initcom();
     }
 
     protected createChildren(): void {
@@ -32,6 +34,9 @@ class ItemsGroup extends eui.DataGroup {
 
     }
 
+    /**
+     * 計算已有投注的數量
+     */
     public getChooseArray(): number {
         var total: number = 0;
         for (var i: number = 0; i < this.dataArray.length; ++i) {
@@ -41,14 +46,18 @@ class ItemsGroup extends eui.DataGroup {
         }
 
         return total;
-
-        // alert(total);
     }
 
+    /**
+     * 計算得獎的投注數量
+     */
     public getIndexCount(index: number): number {
         return this.dataArray.getItemAt(index).count;
     }
 
+    /**
+     * 重設次數
+     */
     public resetCount(): void {
         for (var i: number = 0; i < this.dataArray.length; ++i) {
             this.dataArray.getItemAt(i).count = 0;
@@ -56,13 +65,20 @@ class ItemsGroup extends eui.DataGroup {
         }
     }
 
-
-    private selectItem(e: eui.ItemTapEvent): void {
-        console.log(this.lst.selectedIndex, this.lst.selectedItem);
-    }
+    /**
+     * 選擇按鈕
+     * 
+     */
+    // private selectItem(e: eui.ItemTapEvent): void {
+    //     console.log(this.lst.selectedIndex, this.lst.selectedItem);
+    // }
 
     private formatStr = "egg_{0}_png";
 
+    /**
+     * 建立Item數組
+     * 
+     */
     private initData(): any {
         var tempArray = [];
         for (var i = 0; i < this.btnCount; i++) {
@@ -70,52 +86,4 @@ class ItemsGroup extends eui.DataGroup {
         }
         return tempArray;
     }
-
-    // public resize(): void {
-    //     let tLayout: eui.TileLayout = new eui.TileLayout();
-    //     tLayout.horizontalAlign = egret.HorizontalAlign.CENTER;
-    //     tLayout.verticalAlign = egret.VerticalAlign.MIDDLE;
-    //     tLayout.horizontalGap = 10;
-    //     tLayout.verticalGap = 10;
-    //     tLayout.columnAlign = eui.ColumnAlign.JUSTIFY_USING_WIDTH;
-    //     tLayout.rowAlign = eui.RowAlign.JUSTIFY_USING_HEIGHT;
-    //     tLayout.paddingTop = 0;
-    //     tLayout.paddingRight = 0;
-    //     tLayout.paddingLeft = 0;
-    //     tLayout.paddingBottom = 10;
-    //     tLayout.requestedColumnCount = 3;  /// 设置两列显示
-    //     this.dataList.layout = tLayout;    /// 网格布局
-    // }
-
-    public updateView(items: TItemsData): void {
-        items.data.forEach(element => {
-            // TODO:更新資料
-            egret.log(this.lst.getElementAt(element));
-        });
-    }
-
-}
-
-class IitemData {
-    public index: number;
-    public count: number;
-}
-
-class TItemsData {
-    public data: any[];
-    private maxCount: number;
-
-    constructor() {
-        // 預設給1000
-        this.maxCount = 6;
-        this.data = [];
-        for (let i: number = 0; i < this.maxCount; i++) {
-            let data: IitemData;
-            data.index = i;
-            data.count = 0;
-            this.data.push(data);
-        }
-    }
-
-
 }

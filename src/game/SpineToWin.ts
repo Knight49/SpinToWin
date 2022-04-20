@@ -1,25 +1,29 @@
 
-
+/** 主要遊戲畫面 */
 class SpineToWin extends eui.Component implements eui.UIComponent {
+	/** 指針:圖 */
 	private point_ig: eui.Image;
+	/** 轉盤:圖 */
 	private turn_ig: eui.Image;
-	private turn_gp: eui.Group;
+	/** 開始:按鈕 */	
 	private start_bt: eui.Button;
+	/** 存檔:按鈕 */
 	private exit_bt: eui.Button;
+	/** 轉動時提示: 文字*/	
 	private run_tx: eui.Label;
+	/** 擁有金幣: 文字*/	
 	private own_coin_tx: eui.Label;
+	/** 下注金額: 文字*/	
 	private bet_coin_tx: eui.Label;
+	/** 得到金額: 文字*/	
 	private reward_coin_tx: eui.Label;
-	
+	/** 轉盤用到的資料: 結構*/		
 	private turnData: TTurnData;
-	// private playerData: TPlayerData;
-	private turnState: ETurnState = ETurnState.readyToStart;
-	private addBetBtns: eui.Image[];
-	private lst: eui.List;
-	private items_Group: eui.DataGroup;
+	/** 轉盤:群組 */
+	private turn_gp: eui.Group;
+	/** 下注按鈕 : 自定義群組*/	
 	private createGP: ItemsGroup;
-	private datalist: eui.ArrayCollection;
-	private playerOneCost = 10;
+	/** 文字format */	
 	private willGetTipStr = "恭喜轉到 : No.{0}";
 	private beStrartTip = "開始轉動..即將出現: No.{0}";
 
@@ -27,31 +31,32 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		super();
 
 		this.once(eui.UIEvent.COMPLETE, this.uiComplete, this);
+	}
 
+	/**
+     * 當元件載完後, 全部初始化
+     */
+	private uiComplete(e: eui.UIEvent): void {
+		this.initData();
+		this.initUICom();
+	}
+
+	/**
+     * 資料初始化
+     */
+	private initData(): void {
+		this.turnData = new TTurnData();
 		GPlayer.getInstance();
 	}
 
-	private uiComplete(e: eui.UIEvent): void {
-		this.initUICom();
-		this.initData();
-	}
-
-	// private imgName: string = "btn_";
-
+	/**
+     * 元件初始化
+     */
 	private initUICom(): void {
 		GFunction.setCenter(this.turn_gp, EAlignment.center);
 		this.start_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onStart, this);
-		this.exit_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onExit, this);
+		this.exit_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSave, this);
 		this.updateView();
-	}
-
-	private selectItem(e: eui.ItemTapEvent): void {
-		console.log(this.createGP.lst.selectedIndex, this.createGP.lst.selectedItem);
-	}
-
-	// 以下開始
-	private initData(): void {
-		this.turnData = new TTurnData();
 	}
 
 	protected partAdded(partName: string, instance: any): void {
@@ -62,9 +67,12 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		super.childrenCreated();
 	}
 
+	/**
+     * 開始轉
+     */
 	private onStart(): void {
 		GPlayer.data.getConin = 0;
-		
+
 		if (GPlayer.canPlay()) {
 			let rad: number = GFunction.getRandomInt(15);
 			this.turnData.resulte = rad;
@@ -72,45 +80,59 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 			// this.run_tx.text = String(rad);
 			let toAngle: number = this.turnData.getAngle(rad);
 			TweenMax.to(this.turn_gp, 5, { rotation: toAngle, onComplete: this.finishComplet.bind(this) });
-			GPlayer.playOnce();
 
+			GPlayer.playOnce();
 			this.updateView();
 		}
 	}
 
-	private onExit(): void {
+	/**
+     * 存檔
+     */
+	private onSave(): void {
 		GPlayer.save();
 	}
-
-	private calculateConin() {
-		let use: number = this.createGP.getChooseArray();
-
-	}
-
-	public onAdd(index: number) {
-
-	}
-
+	
+	/**
+     * 轉完後處理的工作
+     */
 	private finishComplet(): void {
 		this.setTipText(this.willGetTipStr, String(this.turnData.resulte % 6));
 		let index = this.turnData.resulte % 6;
 		let count = this.createGP.getIndexCount(index);
-		GPlayer.data.getConin = count * GConst.PAY_COIN;
+		GPlayer.addGetCoin(count);
+		this.updateView();
+
 		if (count > 0) {
 			alert("恭喜中獎金 : " + count * GConst.PAY_COIN);
 		} else {
 			alert("再接再厲");
 		}
 
-		this.createGP.resetCount();
+		this.reset();
 	}
 
-	private setTipText(formatStr: string, value: string): void {
+	/**
+     * 重設玩家資料及顯示
+     */
+	private reset(): void {
+		this.createGP.resetCount();
+		GPlayer.data.getConin = 0;
+		GPlayer.data.nowUseConin = 0;
+		this.updateView();
+	}
 
+	/**
+     * 設定提示字串
+     */
+	private setTipText(formatStr: string, value: string): void {
 		this.run_tx.text = formatStr.format(value);
 	}
 
-	public updateView():void{
+	/**
+     * 更新view
+     */
+	public updateView(): void {
 		this.own_coin_tx.text = GPlayer.data.ownCoin.toString();
 		this.bet_coin_tx.text = GPlayer.data.nowUseConin.toString();
 		this.reward_coin_tx.text = GPlayer.data.getConin.toString();

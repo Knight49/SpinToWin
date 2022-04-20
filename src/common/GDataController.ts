@@ -46,12 +46,13 @@ class GDataController {
 
 		// TODO:檢查各種轉換問題 & key 檢查
 		egret.localStorage.setItem(key, valueString);
+		alert("存檔成功");
 	}
 
 	/**
 	* 讀檔:讀取後轉成指定的結構
 	*/
-	public readToStruct(key:string) : any
+	public readToStruct(key:string, defaultValue:any) : any
 	{
 		let valueString : string = egret.localStorage.getItem(key);
 		// let result = new kind().from;
@@ -62,7 +63,7 @@ class GDataController {
 		 	 return JSON.parse(valueString);
 			// return result;
 		}else{
-			return null;
+			return defaultValue;
 		}
 	}
 

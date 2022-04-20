@@ -18,7 +18,7 @@ class GConst {
     public static DATAKEY_PLAYER_OWNCOIN = "own_coin";
 
      /**
-     * 轉盤盤面數量:Y軸
+     * 使用一次花費100
      */
     public static PAY_COIN : number = 100; 
     

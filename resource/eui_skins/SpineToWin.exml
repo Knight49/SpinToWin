@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="SpineToWinSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+<e:Skin class="SpineToWinSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
 	<w:Config id="1802797a564" ></w:Config>
 	<e:Image left="0" right="0" top="0" bottom="0" source="backgourd_jpg" locked="true"/>
 	<e:Group id="turn_gp" width="470" height="470" x="360" y="329" anchorOffsetX="235" anchorOffsetY="235" scaleX="1.3" scaleY="1.3" locked="true">
@@ -12,60 +12,23 @@
 		<e:Image id="egg_5" y="336.22" scaleX="0.3" scaleY="0.3" x="65.2" rotation="240" source="egg_5_png" anchorOffsetX="127.95"/>
 		<e:Image id="egg_6" y="397.79" scaleX="0.3" scaleY="0.3" x="120.32" rotation="216" anchorOffsetX="127.95" source="egg_0_png"/>
 		<e:Image id="egg_7" y="425.55" scaleX="0.3" scaleY="0.3" x="192.63" rotation="196" anchorOffsetX="130.37" source="egg_1_png"/>
-		<e:Image id="egg_8" y="426.91" scaleX="0.3" scaleY="0.3" x="271.75" rotation="172" source="egg_8_png" anchorOffsetX="130.37"/>
-		<e:Image id="egg_9" y="400.26" scaleX="0.3" scaleY="0.3" x="348.8" rotation="148" source="egg_9_png" anchorOffsetX="130.37"/>
-		<e:Image id="egg_10" y="340.88" scaleX="0.3" scaleY="0.3" x="413.96" rotation="120" source="egg_10_png" anchorOffsetX="130.37"/>
-		<e:Image y="260.11" scaleX="0.3" scaleY="0.3" x="436.06" rotation="96" id="egg_11" source="egg_11_png" anchorOffsetX="130.37"/>
-		<e:Image y="179.93" scaleX="0.3" scaleY="0.3" x="424.45" rotation="72" id="egg_12" source="egg_12_png" anchorOffsetX="130.37"/>
-		<e:Image y="106.44" scaleX="0.3" scaleY="0.3" x="386.73" rotation="48" id="egg_13" source="egg_13_png" anchorOffsetX="130.37"/>
-		<e:Image y="54.22" scaleX="0.3" scaleY="0.3" x="320.72" rotation="24" id="egg_14" source="egg_14_png" anchorOffsetX="130.37"/>
+		<e:Image id="egg_8" y="426.91" scaleX="0.3" scaleY="0.3" x="271.75" rotation="172" anchorOffsetX="130.37" source="egg_2_png"/>
+		<e:Image id="egg_9" y="400.26" scaleX="0.3" scaleY="0.3" x="348.8" rotation="148" anchorOffsetX="130.37" source="egg_3_png"/>
+		<e:Image id="egg_10" y="340.88" scaleX="0.3" scaleY="0.3" x="413.96" rotation="120" anchorOffsetX="130.37" source="egg_4_png"/>
+		<e:Image y="260.11" scaleX="0.3" scaleY="0.3" x="436.06" rotation="96" id="egg_11" anchorOffsetX="130.37" source="egg_5_png"/>
+		<e:Image y="179.93" scaleX="0.3" scaleY="0.3" x="424.45" rotation="72" id="egg_12" anchorOffsetX="130.37" source="egg_0_png"/>
+		<e:Image y="106.44" scaleX="0.3" scaleY="0.3" x="386.73" rotation="48" id="egg_13" anchorOffsetX="130.37" source="egg_1_png"/>
+		<e:Image y="54.22" scaleX="0.3" scaleY="0.3" x="320.72" rotation="24" id="egg_14" anchorOffsetX="130.37" source="egg_2_png"/>
 	</e:Group>
-	<e:Group width="600" height="300" y="704.04" horizontalCenter="0" visible="false">
 
-
-
-
-
-		<e:Scroller width="415" height="400" y="0" skewX="0" horizontalCenter="0" visible="false">
-			<e:Group explicitHeight="0" explicitWidth="0">
-				<e:Image id="btn_0" y="7.05" scaleX="0.5" scaleY="0.5" x="40" rotation="0" source="egg_2_png" anchorOffsetX="0" anchorOffsetY="0"/>
-				<e:Image id="btn_1" source="egg_1_png" y="40" scaleX="0.5" scaleY="0.5" x="64" rotation="0" anchorOffsetX="0" anchorOffsetY="0"/>
-				<e:Image id="btn_2" width="256" height="256" y="41" scaleX="0.5" scaleY="0.5" x="43" rotation="0" source="egg_0_png" anchorOffsetX="0" anchorOffsetY="0"/>
-				<e:Image id="btn_3" y="41" scaleX="0.5" scaleY="0.5" x="63" rotation="0" source="egg_14_png" anchorOffsetX="0" anchorOffsetY="0"/>
-				<e:Image id="btn_4" y="67" scaleX="0.5" scaleY="0.5" x="41" rotation="0" source="egg_12_png" anchorOffsetX="0" anchorOffsetY="0"/>
-				<e:Image id="btn_5" y="60" scaleX="0.5" scaleY="0.5" x="47" rotation="0" source="egg_13_png" anchorOffsetX="0" anchorOffsetY="0"/>
-				<e:layout>
-					<e:TileLayout orientation="rows" verticalGap="82"/>
-				</e:layout>
-			</e:Group>
-		</e:Scroller>
-
-
-		<e:layout>
-			<e:BasicLayout/>
-		</e:layout>
-
-
-
-
-
-
-
-
-
-		</e:Group>
 
 	<e:Image id="point_ig" width="48" height="75" x="330" y="0" source="point_png" scaleX="1.5" scaleY="1.5" locked="true"/>
 
 
-	<e:Button id="start_bt" label="Button" x="433" y="993"/>
-	<e:Label id="run_tx" text="Label" y="640" size="93" anchorOffsetX="0" width="455.27" horizontalCenter="0" textAlign="center"/>
-	<e:DataGroup id="items_Group" width="720" height="124" horizontalCenter="0" bottom="0" itemRendererSkinName="ItemsGroupSkin" anchorOffsetY="0">
-		<e:layout>
-			<e:TileLayout orientation="columns"/>
-		</e:layout>
-	</e:DataGroup>
-
+	<e:Button id="start_bt" label="開始" y="1100" width="200" height="100" x="500"/>
+	<e:Button id="goldFinger_bt" label="金手指" x="68" y="1100" width="200" height="100"/>
+	<e:Label id="run_tx" text="Label" size="50" textAlign="center" horizontalCenter="0" verticalAlign="bottom" y="650" stroke="4"/>
+	<ns1:ItemsGroup id="createGP" width="384" height="256" horizontalCenter="0" bottom="277" anchorOffsetY="0" anchorOffsetX="0"/>
 
 
 	

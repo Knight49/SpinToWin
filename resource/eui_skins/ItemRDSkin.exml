@@ -2,6 +2,7 @@
 <e:Skin class="ItemRDSkin" width="128" height="128" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
 	<w:Config id="180422eb97f" ></w:Config>
 	<e:Rect left="0" right="0" bottom="0" top="0" strokeAlpha="1" strokeWeight="4" touchEnabled="false"/>
-	<e:Image id="item_icon" width="128" height="128" scaleX="1" scaleY="1" x="0" y="0" touchEnabled="false" source="egg_0_png"/>
-	<e:Label id="item_lab" text="0" y="0" textAlign="center" verticalAlign="bottom" height="128" width="128" background="false" stroke="3" size="50" x="0" touchEnabled="false"/>
+	<e:Image id="item_icon" width="128" height="128" scaleX="1" scaleY="1" x="0" y="0" touchEnabled="true" source="egg_0_png"/>
+	<e:Label id="item_lab" text="0" y="0" textAlign="right" verticalAlign="bottom" height="128" width="128" background="false" stroke="3" size="50" x="0" touchEnabled="false"/>
+	<e:Label id="item_no" text="NO.0" y="0" textAlign="left" verticalAlign="top" height="128" width="128" background="false" stroke="3" size="24" x="0" touchEnabled="false"/>
 </e:Skin>

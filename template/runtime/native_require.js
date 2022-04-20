@@ -14,6 +14,7 @@ var game_file_list = [
 	"bin-debug/common/GEnum.js",
 	"bin-debug/common/GExpansion.js",
 	"bin-debug/common/GFunction.js",
+	"bin-debug/common/GPlayer.js",
 	"bin-debug/EffectController.js",
 	"bin-debug/game/ItemRD.js",
 	"bin-debug/game/ItemsGroup.js",

@@ -106,8 +106,9 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 	 * 金手指指定結果
 	 */
 	public goldFingerSet(index: number): void {
-		this.reset();
+		// this.reset();
 		let rightIndex = index % 6;
+		this.turnData.resulte = rightIndex;
 		this.setTipText(this.beStrartTip, String(rightIndex));
 		let toAngle: number = this.turnData.getAngle(index);
 		TweenMax.to(this.turn_gp, 5, { rotation: toAngle, onComplete: this.finishComplet.bind(this) });

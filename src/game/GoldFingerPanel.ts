@@ -1,18 +1,32 @@
 class GoldFingerPanel extends eui.Component implements eui.UIComponent {
 	private title_tx: egret.TextField;
-	/** :按鈕 */
+	/** 
+	 * :按鈕
+	 */
 	private add_bt: eui.Button;
-	/** 開始:按鈕 */
+	/** 
+	 * 開始:按鈕
+	 */
 	private set_bt: eui.Button;
-	/** 加錢:輸入框 */
+	/**
+	 *  加錢:輸入框
+	 */
 	private add_input: eui.TextInput;
-	/** 設定:輸入框 */
+	/** 
+	 * 設定:輸入框
+	 */
 	private set_input: eui.TextInput;
-	/** 關閉 */
+	/** 
+	 * 關閉
+	 */
 	private close_bt: eui.Button;
-
+	/** 
+	 * 遊戲主畫面更新view用 
+	*/
 	private func: Function;
-
+	/** 
+	 * 遊戲主畫面主體
+	*/
 	private scope: any;
 
 	constructor(scope: any, func: Function) {
@@ -20,9 +34,11 @@ class GoldFingerPanel extends eui.Component implements eui.UIComponent {
 		this.skinName = "GoldFingerPanelSkin";
 		this.scope = scope;
 		this.func = func;
-		// this.resetSize();
 	}
 
+	/** 
+	 * 設定標題
+	*/
 	public setTitle(name: string): void {
 		this.title_tx.text = name;
 	}
@@ -41,6 +57,9 @@ class GoldFingerPanel extends eui.Component implements eui.UIComponent {
 
 	}
 
+	/** 
+	 * 加金幣
+	*/
 	private onAdd(): void {
 		if (Number(this.add_input.text)) {
 			GPlayer.GoldFingerAdd(Number(this.add_input.text));
@@ -49,23 +68,20 @@ class GoldFingerPanel extends eui.Component implements eui.UIComponent {
 		}
 	}
 
+	/** 
+	 * 設定結果
+	*/
 	private onSet(): void {
 		if (Number(this.set_input.text)) {
 			this.scope.goldFingerSet(Number(this.set_input.text));
 		}
 	}
 
+	/** 
+	 * 關閉Ui
+	*/
 	private onClose(): void {
 		this.visible = false;
 		GPlayer.save();
 	}
-
-	public resetSize(): void {
-		this.x = 150;
-		this.y = 700;
-		this.setTitle("金手指");
-		this.horizontalCenter = 0;
-		this.verticalCenter = 0;
-	}
-
 }

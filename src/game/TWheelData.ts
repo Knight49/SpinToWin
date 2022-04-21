@@ -1,4 +1,4 @@
-class TTurnData {
+class TWheelData {
 	private aniTimer: number;
 	private roundCount: number;
 	private preIndexAngle: number;

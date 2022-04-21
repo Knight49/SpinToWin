@@ -1,10 +1,10 @@
 
 enum EMoveWay {
-	None,
-	TopToDown,
-	DownToTop,
-	LeftToRight,
-	RightToLeft
+	none,
+	topToDown,
+	downToTop,
+	leftToRight,
+	rightToLeft
 }
 
 enum EEffectWay{
@@ -14,7 +14,7 @@ enum EEffectWay{
 
 enum ETurnState{
 	readyToStart,
-	truning,
+	turning,
 	readyToStop,
 	stoping,
 	stopFinsh

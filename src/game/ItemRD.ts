@@ -1,20 +1,36 @@
 /** item : 類似單個物品欄概念，經由ItemsGroup來建立 */
 class ItemRD extends eui.ItemRenderer {
-	/*** 按鈕排序 */
+	/*** 
+	 * 按鈕排序
+	 */
 	public index: number;
-	/*** 投注次數 */
+	/**
+	 *  投注次數
+	 */
 	public count: number;
-	/*** icon名稱 */	
+	/**
+	 * icon名稱
+	 */	
 	public picName: string;
-	/*** 物品圖 */
+	/**
+	 * 物品圖
+	 */
 	private item_icon: eui.Image;
-	/*** 投注次數:文字元件 */
+	/**
+	 *  投注次數:文字元件
+	 */
 	private item_lab: eui.Label;
-	/*** 排序:文字元件 */
+	/**
+	 *  排序:文字元件
+	 */
 	private item_no: eui.Label;
-	/*** 格式化:文字格式 */	
+	/**
+	 *  格式化:文字格式
+	 */	
 	private noStrFormat: string = "no.{0}"
-	/*** 更新資料用 */
+	/**
+	 *  更新資料用
+	 */
 	private callbackFunc: Function;
 
 	constructor(func: Function) {

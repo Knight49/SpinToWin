@@ -2,10 +2,14 @@
 class GPlayer {
 	static instance: GPlayer;
 	private static _instance: GPlayer;
-	/** 玩家金額資料 */
+	/** 
+	 * 玩家金額資料
+	 */
 	public static data: TPlayerData;
 
-	/** 單例模式 */
+	/** 
+	 * 單例模式
+	 */
 	public static getInstance(): GPlayer {
 		if (!GPlayer.instance) {
 			GPlayer.instance = new GPlayer();
@@ -69,7 +73,7 @@ class GPlayer {
 	}
 
 	/**
-	* 
+	* 加下注金額
 	*/
 	public static addUserCoin() {
 		GPlayer.data.nowUseConin += GConst.PAY_COIN;

@@ -20,7 +20,7 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 	/** 得到金額: 文字*/
 	private reward_coin_tx: eui.Label;
 	/** 轉盤用到的資料: 結構*/
-	private turnData: TTurnData;
+	private turnData: TWheelData;
 	/** 轉盤:群組 */
 	private turn_gp: eui.Group;
 	/** 下注按鈕 : 自定義群組*/
@@ -48,7 +48,7 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 	 * 資料初始化
 	 */
 	private initData(): void {
-		this.turnData = new TTurnData();
+		this.turnData = new TWheelData();
 		GPlayer.getInstance();
 	}
 

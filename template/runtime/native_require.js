@@ -21,7 +21,7 @@ var game_file_list = [
 	"bin-debug/game/ItemsGroup.js",
 	"bin-debug/game/SpineToWin.js",
 	"bin-debug/game/TPlayerData.js",
-	"bin-debug/game/TTurnData.js",
+	"bin-debug/game/TWheelData.js",
 	"bin-debug/LoadingUI.js",
 	"bin-debug/Main.js",
 	"bin-debug/SoundController.js",

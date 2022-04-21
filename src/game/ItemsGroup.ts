@@ -1,14 +1,20 @@
  /** 自訂義Group */
 class ItemsGroup extends eui.DataGroup {
-    /** 數組 : 跟dataArray配套使用*/
+    /** 
+     * 數組 : 跟dataArray配套使用
+     */
     public dataList: eui.List;
-    /** 數據封裝 : 當數據改變時，會派發通知*/
+    /**
+     *  數據封裝 : 當數據改變時，會派發通知
+     */
     private dataArray: eui.ArrayCollection = new eui.ArrayCollection();
-    /** 方便建立*/
+    /** 
+     * 方便建立
+     */
     public static instance: ItemsGroup;
-    
-    // public lst: eui.List;
-     /** 按鈕數量*/
+     /** 
+      * 按鈕數量
+      */
     private btnCount: number = 6;
 
     public constructor() {

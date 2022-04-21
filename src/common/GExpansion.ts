@@ -1,12 +1,12 @@
 /**
-* ÂX¥R¦hºû°}¦C¤èªk
+* å¤šç¶­Arrayå»ºç«‹æ“´å……
 */
 interface ArrayConstructor {
 	from(arrayLike: any, mapFn?, thisArg?): Array<any>;
 }
 
 /**
-* ÂX¥R¤å¦r®æ¦¡¤Æ : ex. yourname
+* å­—ä¸²æ ¼å¼åŒ–:ex.youstring{0}
 */
 interface String {
 	format(...replacements: string[]): string;

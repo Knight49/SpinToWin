@@ -14,10 +14,13 @@ class ItemRD extends eui.ItemRenderer {
 	private item_no: eui.Label;
 	/*** 格式化:文字格式 */	
 	private noStrFormat: string = "no.{0}"
+	/*** 更新資料用 */
+	private callbackFunc: Function;
 
-	constructor() {
+	constructor(func: Function) {
 		super();
 		this.skinName = "resource/eui_skins/ItemRDSkin.exml";
+		this.callbackFunc = func;
 	}
 
 	protected createChildren(): void {
@@ -43,7 +46,7 @@ class ItemRD extends eui.ItemRenderer {
 		if (GPlayer.addIsEnough()) {
 			this.data.count += 1;
 			this.count = this.data.count;
-			GPlayer.data.nowUseConin += GConst.PAY_COIN;
+			GPlayer.addUserCoin();
 			this.dataChanged();
 		} else {
 			alert("金幣不足");

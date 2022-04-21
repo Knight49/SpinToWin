@@ -33,6 +33,7 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		super();
 
 		this.once(eui.UIEvent.COMPLETE, this.uiComplete, this);
+		this.once(eui.CollectionEvent.CLOSE, this.onSave, this);
 	}
 
 	/**
@@ -59,7 +60,12 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		this.start_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onStart, this);
 		this.exit_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSave, this);
 		this.goldFinger_bt.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onGoldFinger, this);
+	
 		this.updateView();
+		this.mypanel = new GoldFingerPanel(this, this.updateView);
+		this.addChild(this.mypanel);
+		this.mypanel.visible = false;
+		
 	}
 
 	protected partAdded(partName: string, instance: any): void {
@@ -106,22 +112,15 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		let toAngle: number = this.turnData.getAngle(index);
 		TweenMax.to(this.turn_gp, 5, { rotation: toAngle, onComplete: this.finishComplet.bind(this) });
 	}
-
+	
+	private mypanel : GoldFingerPanel;
 	/**
 	 * 金手指
 	 */
 	private onGoldFinger(): void {
-
-		let panel: GoldFingerPanel = new GoldFingerPanel(this);
-
-		// let panel = new eui.Panel();
-		// panel.title = "金手指";
-		// panel.horizontalCenter = 0;
-		// panel.verticalCenter = 0;
-		// panel.width = 500;
-		// panel.height = 500;
-		// panel.y = 100;
-		this.addChild(panel);
+		this.mypanel.visible = true;
+		this.mypanel.x = 150;
+		this.mypanel.y = 700;
 	}
 
 	/**

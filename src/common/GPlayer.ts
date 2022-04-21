@@ -68,7 +68,12 @@ class GPlayer {
 		}
 	}
 
-	
+	/**
+	* 
+	*/
+	public static addUserCoin() {
+		GPlayer.data.nowUseConin += GConst.PAY_COIN;
+	}
 
 	/**
 	* 加入得獎金額

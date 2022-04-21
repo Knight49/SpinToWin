@@ -52,7 +52,7 @@ class GDataController {
 	/**
 	* 讀檔:讀取後轉成指定的結構
 	*/
-	public readToStruct(key:string, defaultValue:any) : any
+	public readToStruct(key:string, defaultValue) : any
 	{
 		let valueString : string = egret.localStorage.getItem(key);
 		// let result = new kind().from;

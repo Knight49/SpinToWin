@@ -1,0 +1,59 @@
+[egret.Stage]
+- [Main]
+ - preDecodeLayer
+ - defaultBackLayer
+ - gameLayer
+     -- sangosslot.Game
+	  -project.GameScene
+	    - BG 
+	    - project.TopBanner
+	    - project.NGGameUI
+	    - project.BGGameUI
+	    - project.FGGameUI
+	    - project.BottomUI
+
+ - defaultFrontLayer
+ - XXXX 有一張egret.sprite不知道幹嘛的
+ - changeGameLayerDown
+ - gamePanelLayer
+ - changeGameLayerUp
+
+ - waitGameLayer
+   -- 黑遮罩
+
+ - tableLayer 
+   -- 選桌UI
+
+ - commonLayer
+   -- 共用按鈕功能
+   -- 設定
+   -- 切換遊戲選單
+
+ - gameTempBmp
+ - gameLayer2
+   -- 幸運彩金
+   -- BigWin 效果
+   -- 全場景特效 JPUI
+   -- 總得分
+   -- 下注 slider ??
+
+
+ - playerInfoLayer // 需要整理出來一個Layer， 目前egret.sprite 
+   -- bottom banner 
+   -- 金幣 下注 獲得
+
+ - marqueeLayer
+   -- 跑馬燈底圖
+   ---  跑馬燈文字
+
+ - newWinListLayer
+ - changerGameLayer
+ - superJackpotLayer
+ - tipLayer
+ - gameLoadingLayer
+ - loadingLayer
+ - dialogLayer
+   -- 系統公告 UI
+   -- 確認訊息 UI
+ - cheatLayer 
+   -- 作弊 UI

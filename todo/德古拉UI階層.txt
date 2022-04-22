@@ -1,0 +1,5 @@
+dracula.DraulaScene -----------> dracula.Game
+    - egret.Sprite ------------> dracula.GameScene    !不要用圖當階層
+      -- dracula.NGScene ------>    NG UI 
+       --- egret.Sprite  ------>            !不要用圖當階層
+        ---- 各功能UI    ------>   

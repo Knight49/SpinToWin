@@ -80,6 +80,7 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 	 * 開始轉
 	 */
 	private onStart(): void {
+
 		GPlayer.data.getConin = 0;
 
 		if (GPlayer.canPlay()) {
@@ -92,6 +93,7 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 
 			GPlayer.playOnce();
 			this.updateView();
+			SoundController.getInstance().Test();
 		}
 	}
 

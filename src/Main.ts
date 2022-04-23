@@ -130,7 +130,12 @@ class Main extends eui.UILayer {
      */
     protected startCreateScene(): void {
 
-        this.addChild(new SpineToWin());
+        GLayerManager.getInstance().createAllLayer(this);
+        GLayerManager.getInstance().addToLayer(new SpineToWin(), EUILayerKind.gameLayer);
+
+        // this.addToLayer(new SpineToWin(), EUILayerKind.gameLayer);
+
+        // this.addChild(new SpineToWin());
         return;
         let sky: egret.Bitmap = this.createBitmapByName("bg_jpg");
         this.addChild(sky);
@@ -236,7 +241,7 @@ class Main extends eui.UILayer {
 
         change();
     }
-    
+
     /**
      * 切换描述内容
      * Switch to described content
@@ -256,4 +261,7 @@ class Main extends eui.UILayer {
         panel.verticalCenter = 0;
         this.addChild(panel);
     }
+
+    
 }
+

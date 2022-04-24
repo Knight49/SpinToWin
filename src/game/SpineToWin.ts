@@ -93,7 +93,7 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 
 			GPlayer.playOnce();
 			this.updateView();
-			SoundController.getInstance().Test();
+			SoundController.getInstance().Play("jackpot", soundPalyWay.once);
 		}
 	}
 
@@ -137,9 +137,10 @@ class SpineToWin extends eui.Component implements eui.UIComponent {
 		this.updateView();
 
 		if (count > 0) {
-			alert("恭喜中獎金 : " + count * GConst.PAY_COIN);
+			this.setTipText("恭喜中獎金 : {0}", (count * GConst.PAY_COIN).toString());
+			SoundController.getInstance().Play("winer", soundPalyWay.once);
 		} else {
-			alert("再接再厲");
+			this.setTipText("再接再厲 : {0}", ":)");
 		}
 
 		this.reset();

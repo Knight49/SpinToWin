@@ -7,7 +7,7 @@ class TWheelData {
 
 	constructor() {
 		this.resulte = 0;
-		this.roundCount = 10;
+		this.roundCount = 4;
 		this.aniTimer = 0.1;
 		this.preIndexAngle = 360 / 15;
 	}
